@@ -10,7 +10,8 @@ internal class UserDatabase : IDisposable
     private readonly Stream secondaryIndexFile;
     private readonly Tree<Guid, uint> primaryIndex;
     private readonly Tree<Tuple<string, int>, uint> secondaryIndex;
-
+    private readonly RecordStorage userRecords;
+    private readonly UserSerializer userSerializer;
     // to do
     // add record storage
     // add user serializer
